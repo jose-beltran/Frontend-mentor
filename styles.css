@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --yellow-color: #f4d04e;
+  --gray950-color: #111111;
+  --gray500-color: #6b6b6b;
+  --white-color: #ffffff;
+  --textExtra-bold: 900;
+  --text-medium: 500;
+  --line-height-150: 150%;
+}
+
+* {
+  font-family: "Figtree", serif;
+}
+
+body {
+  background-color: var(--yellow-color);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 384px;
+  height: 522px;
+  background-color: var(--white-color);
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: var(--gray950-color) 7px 10px 0 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.content {
+  margin: 0 5%;
+  padding-top: 5%;
+  line-height: var(--line-height-150);
+}
+
+.content-image {
+  margin: 0 auto;
+}
+
+.content-image img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.learning {
+  background-color: var(--yellow-color);
+  text-align: center;
+  padding: 2px 0;
+  width: 82px;
+  color: var(--gray950-color);
+  font-size: 14px;
+  font-weight: var(--textExtra-bold);
+  border-radius: 5px;
+}
+
+.publish {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: var(--text-medium);
+  color: var(--gray950-color);
+}
+
+.foundations {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: var(--textExtra-bold);
+  color: var(--gray950-color);
+}
+
+.text {
+  margin-top: 0;
+  font-weight: var(--text-medium);
+  font-size: 16px;
+  color: var(--gray500-color);
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.author p {
+  font-weight: var(--textExtra-bold);
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.author img {
+  width: 32px;
+  height: 32px;
+}
+
+.attribution {
+  margin: 0;
+  padding: 5px 0;
+  background-color: var(--gray950-color);
+  color: var(--white-color);
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .card {
+        width: 85%;
+        height: auto;
+    }
+    .learning {
+        padding: 1px 0;
+        font-size: 12px;
+    }
+    .publish {
+        font-size: 12px;
+    }
+    .foundations {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .author {
+        margin-bottom: 10px;
+    }
+}
