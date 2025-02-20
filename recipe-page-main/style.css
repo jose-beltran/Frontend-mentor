@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--stone100: hsl(30, 54%, 90%);
+	--stone150: hsl(30, 18%, 87%);
+	--stone600: hsl(30, 10%, 34%);
+	--stone900: hsl(24, 5%, 18%);
+	--brown800: hsl(14, 45%, 36%);
+	--rose800: hsl(332, 51%, 32%);
+	--rose50: hsl(330, 100%, 98%);
+	--font-young: "Young Serif", serif;
+	--font-outfit: "Outfit", serif;
+}
+
+body {
+	background-color: var(--stone100);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-family: var(--font-outfit);
+}
+
+.card {
+	background-color: var(--white);
+	height: auto;
+	width: 50%;
+    margin: 5% auto;
+	border-radius: 20px;
+}
+
+.content {
+	margin: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	gap: 1px;
+}
+
+img {
+    display: flex;
+    margin: 5% auto 0 ;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.content h2 {
+	margin: 2% 0 0;
+	font-size: 45px;
+	font-family: var(--font-young);
+	font-weight: 400;
+}
+
+.content p {
+	font-family: var(--font-outfit);
+	color: var(--stone600);
+}
+
+.preparation-time {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 1% 0 3% 2%;
+	background-color: var(--rose50);
+	font-family: var(--font-outfit);
+	border-radius: 10px;
+	margin-top: 2%;
+}
+
+.preparation-time p {
+	margin-left: 3%;
+	color: var(--rose800);
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.preparation-time ul {
+	color: var(--stone600);
+	margin-top: 0;
+}
+
+.preparation-time ul li:first-child {
+	padding-top: 0;
+}
+
+.preparation-time ul li {
+	padding: 8px;
+}
+
+.preparation-time ul li::marker {
+	color: var(--rose800);
+}
+
+.preparation-time ul li span {
+	padding-left: 13px;
+	font-weight: 700;
+}
+
+.content h3 {
+	color: var(--brown800);
+	font-size: 35px;
+	font-family: var(--font-young);
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+.ul {
+	margin-top: 2%;
+	padding-left: 4%;
+	color: var(--stone600);
+}
+
+.ul li::marker {
+	color: var(--brown800);
+    font-weight: bold;
+}
+
+.ul li {
+	padding: 10px 0 0 28px;
+	font-size: 16px;
+    line-height: 25px;
+}
+
+.linea {
+	border-top: 0.5px groove rgb(189, 189, 189);
+	width: 100%;
+	margin: 20px auto 0 auto;
+}
+
+
+ol li span {
+    font-weight: 700;
+}
+
+table {
+    color: var(--stone600);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.td-text {
+    padding: 3% 0 2% 5%;
+}
+
+.kcal {
+    color: var(--brown800);
+    font-weight: bold;
+}
+
+tr:not(:first-child){
+    border-top: 0.5px groove rgb(189, 189, 189);
+    width: 100%;
+    margin: 20px auto 0 auto;
+}
+
+.attribution {
+    margin: 0;
+    background-color: var(--rose50);
+    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+    .card {
+        width: 106%;
+        height: 110%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .content {
+        margin: 10%;        
+    }
+
+    img {
+        margin: 0;
+        width: 100%;
+        height: 170px;
+    }
+
+    .content h2 {
+        font-size: 35px;
+    }
+    
+} 
