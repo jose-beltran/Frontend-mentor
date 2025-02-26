@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--Red: hsl(0, 78%, 62%);
+	--Cyan: hsl(180, 62%, 55%);
+	--Orange: hsl(34, 97%, 64%);
+	--Blue: hsl(212, 86%, 64%);
+	--Grey500: hsl(234, 12%, 34%);
+	--Grey400: hsl(212, 6%, 44%);
+	--White: hsl(0, 0%, 100%);
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: var(--White);
+	font-family: "Poppins", serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    height: 90vh;
+}
+
+.content-titles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	margin-top: 60px;
+	width: 550px;
+}
+
+.title-one {
+	font-size: 28px;
+	font-weight: 200;
+	margin: 0;
+}
+
+.title-two {
+	font-size: 27px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.title-tree {
+	text-align: center;
+	font-weight: 200;
+	margin: 0;
+	padding: 14px;
+}
+
+.content-cards {
+	display: flex;
+	gap: 40px;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-items: start;
+	align-content: start;
+	flex-direction: row;
+}
+
+.card {
+	width: 320px;
+	height: 220px;
+	background-color: var(--White);
+	border-radius: 10px;
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.45);
+	padding: 17px 12px 0 30px;
+	transition: all .2s ease-in-out;
+}
+
+.card:hover {
+	transform: scale(1.1);
+}
+
+.card {
+	align-self: center;
+}
+
+.content-cards .card:nth-child(1) {
+	border-top: 5px solid var(--Cyan);
+}
+
+.content-cards-two .card:nth-child(1) {
+	border-top: 5px solid var(--Red);
+}
+
+.card:nth-child(2) {
+	border-top: 5px solid var(--Orange);
+}
+
+.card:nth-child(3) {
+	border-top: 5px solid var(--Blue);
+}
+
+.content-cards .title {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.content-cards .text {
+	padding-right: 10px;
+	font-size: 14px;
+	font-weight: 200;
+}
+
+.content-cards .img {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-right: 20px;
+}
+
+.content-cards-two {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+	gap: 25px;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+    align-self: flex-end;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 700px) {
+    body {
+        height: auto;
+    }
+
+    .content-titles {
+     width: 95%;   
+    }
+
+    .content-cards {
+        justify-content: center;
+        margin-top: 15%;
+        width: 90%;
+        gap: 0;
+    }
+
+    .card {
+        width: 85%;
+    }
+
+    .content-cards-two {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
