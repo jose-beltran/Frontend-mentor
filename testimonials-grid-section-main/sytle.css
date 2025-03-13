@@ -1,0 +1,215 @@
+:root {
+    --whiteSmoke: rgb(245, 245, 245);
+    --blueViolet: rgb(117, 65, 200);
+    --mauve: rgb(196, 162, 246);
+    --palePurple: rgb(238, 229, 255);
+    --lightPaynes: rgb(103, 109, 126);
+    --paynesGray: rgb(72, 85, 106);
+    --white: rgb(255, 255, 255);
+    --raisinBlack: rgb(25, 33, 46);
+    --timberwolf: rgb(207, 207, 207);
+    --antiFlashWhite: rgb(231, 234, 238);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 0.8125rem; /*13px*/
+    font-weight: 500;
+    background-color: var(--whiteSmoke);
+    color: var(--paynesGray);
+  }
+  
+  .container {
+    max-width: min(100%, 74.5rem); /*1192px*/
+    min-height: 100vh; 
+    min-height: 100svh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main {
+    padding: 2.25rem; /*36px*/
+    opacity: 0;
+    animation: fadeDown 1s ease forwards;
+  }
+  
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-100px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15.8125rem, 1fr)); /*253px*/
+    gap: 2.25rem; /*36px*/
+  }
+  
+  article {
+    padding: 2rem; /*32px*/
+    border-radius: 0.625rem; /*10px*/
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 4rem 4rem 3rem rgba(18, 18, 18, 0.18); /*64px 64px 48px*/
+  }
+  
+  .daniel {
+    grid-column: span 2;
+    background-color: var(--blueViolet);
+    color: var(--palePurple);
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 3.875rem) 0%; /*62px*/
+  }
+  
+  .daniel img {
+    border: 2px solid var(--mauve);
+    box-sizing: content-box;
+  }
+  
+  .daniel p {
+    color: var(--white);
+  }
+  
+  .jonathan {
+    background-color: var(--paynesGray);
+    color: var(--antiFlashWhite);
+  }
+  
+  .jonathan p {
+    color: var(--white);
+  }
+  
+  .jeanette {
+    background-color: var(--white);
+    color: var(--lightPaynes);
+  }
+  
+  .jeanette p {
+    color: var(--paynesGray);
+  }
+  
+  .patrick {
+    grid-column: span 2;
+    background-color: var(--raisinBlack);
+    color: var(--antiFlashWhite);
+  }
+  
+  .patrick p {
+    color: var(--timberwolf);
+  }
+  
+  .patrick img {
+    border: 2px solid var(--blueViolet);
+    box-sizing: content-box;
+  }
+  
+  .kira {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    background-color: var(--white);
+    color: var(--lightPaynes);
+  }
+  
+  .kira p {
+    color: var(--paynesGray);
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  img {
+    border-radius: 100%;
+    width: 1.75rem; /*28px*/
+  }
+  
+  span {
+    font-size: 0.6875rem; /*11px*/
+  }
+  
+  article > p {
+    font-size: 1.25rem; /*20px*/
+    line-height: 120%;
+  }
+  
+  article p {
+    font-weight: 600;
+  }
+  
+  q {
+    line-height: 140%;
+  }
+  
+  q::before {
+    content: open-quote;
+    margin-right: 0.15rem; /*2.4px*/
+  }
+  
+  q::after {
+    content: close-quote;
+    margin-left: 0.15rem; /*2.4px*/
+  }
+  
+  footer {
+    font-size: 0.6875rem; /*11px*/
+    text-align: center;
+    margin: 0.6875rem 1rem 0; /*11px*/
+    text-wrap: pretty;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--blueViolet);
+    font-weight: 600;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (width < 74.5rem) {
+    .container {
+      overflow: hidden;
+    }
+  
+    .jeanette {
+      grid-row: 1;
+      grid-column: 3;
+    }
+    
+    .kira {
+      grid-column: 1 / -1;
+      grid-row: unset;
+    }
+  }
+  
+  @media (width < 56.4375rem) { /*903px*/
+    .jeanette {
+      grid-column: unset;
+      grid-row: unset;
+    }
+  }
+  
+  @media (width < 38.375rem) { /*614px*/
+    .daniel {
+      grid-column: unset;
+      grid-row: unset;
+      background-image: none;
+    }
+  
+    .patrick {
+      grid-column: unset;
+      grid-row: unset;
+    }
+  }
